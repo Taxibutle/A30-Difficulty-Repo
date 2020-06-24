@@ -1,0 +1,118 @@
+"MUD_EXAMPLE"
+{
+  name = "mud"
+  viewId = { "mud" }
+  layer = GROUND
+}
+
+"DIFF_ORGANIC_PILE"
+{
+  name = "organic pile"
+  viewId = { "diff_organic_pile" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 50
+  strength = 80
+}
+
+"DIFF_CRAFTING_ALTAR"
+{
+  name = "crafting altar"
+  viewId = { "altar" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 50
+  strength = 80
+}
+
+"DIFF_PFPILE1"
+{
+  name = "Food Processor"
+  viewId = { "coffin1" }
+  canHideHere = true
+  blockVision = { NORMAL }
+  tickType = Effect Chance 0.002 DropItems {Simple "DIFF_ProcFood"} { 1 2 } 
+  strength2 = {
+    100 BOULDER
+    70 CUT
+  }
+  fire = 100
+}
+
+"DIFF_SEALER_GORGON"
+{
+  name = "Gorgon Stair Sealer"
+  viewId = { "coffin2" }
+  blockMovement = true
+  luxury = 0.7
+  strength = 180
+  fire = 300
+  destroyFX = { DESTROY_FURNITURE Rgb 190 190 40 255 }
+  destroyedRemains = "DOWN_STAIRS"
+  destroyedEffect = Chain { Message "The statue pulses with mana!" SummonEnemy "GORGON_DIFF" {1} none SummonEnemy "DIFF_SKELETON_ENDLESS" { 3 6 } none } 
+}
+
+"DIFF_SPAWNER_COFFIN1"
+{
+  name = "fine coffin"
+  viewId = { "coffin2" }
+  blockMovement = true
+  tickType = Effect Chance 0.009 SummonEnemy "DIFF_SKELETON_ENDLESS" { 1 2 } none
+  luxury = 0.3
+  fire = 50
+  strength = 100
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+
+"DIFF_SPAWNER_COFFIN2"
+{
+  name = "fine coffin"
+  viewId = { "coffin2" }
+  blockMovement = true
+  tickType = Effect Chance 0.012 SummonEnemy "DIFF_ZOMBIE_ENDLESS" { 1 2 } none
+  luxury = 0.3
+  fire = 50
+  strength = 100
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+
+"DIFF_SPAWNER_COFFIN3"
+{
+  name = "luxurious coffin"
+  viewId = { "coffin3" }
+  blockMovement = true
+  tickType = Effect Chance 0.007 SummonEnemy "DIFF_VAMPIRE_ENDLESS" { 1 2 } none
+  luxury = 0.3
+  fire = 50
+  strength = 100
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+
+"DIFF_LOOT_COFFIN2"
+{
+  name = "fine coffin"
+  viewId = { "coffin2" }
+  canHideHere = true
+  usageType = BuiltinUsageId COFFIN
+  fire = 50
+  strength = 40
+  destroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
+}
+
+"DIFF_CHEST_MIMIC_D" {
+  name = "chest"
+  viewId = { "chest" }
+  canHideHere = true
+  fire = 50
+  strength = 30
+  usageType = UsageEffect "open" Chain {
+    CreatureMessage "open the chest" "opens the chest"
+	Chain { 
+	Message "The chest is fake!"
+	SummonEnemy "DIFF_MIMIC_D" { 1 } none
+	DestroyWalls BASH
+	}
+	}
+}

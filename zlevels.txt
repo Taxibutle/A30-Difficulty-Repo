@@ -1,0 +1,33 @@
+# Here come levels for all keeper types
+# At every depth the game chooses a random level that's available
+
+#ALL modify append
+#{
+#  
+#}
+
+# Here come levels specific to white keepers
+LAWFUL modify append
+{
+  {
+    type = FullZLevel {
+      enemy = "DIFF_DARK_ELF_CITADEL"
+      attackChance = 0.9
+    }
+    minDepth = 7
+	width = 50
+  }
+}
+
+# Here come levels specific to dark keepers
+EVIL modify append
+{
+  {
+    type = FullZLevel {
+      enemy = "DIFF_DWARF_CITADEL"
+      attackChance = 0.9
+    }
+    minDepth = 9
+	width = 50
+  }
+}

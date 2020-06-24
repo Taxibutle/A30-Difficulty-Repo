@@ -1,0 +1,8 @@
+"Welcome to KeeperRL Alpha 30! This version of A30 Difficulty was released on 6/13/2020.
+
+The changes coming with this update are below.
+
+* Compatibility added with EVERY other mod, hopefully.
+
+If this is your first time playing KeeperRL, remember to start with the tutorial!"
+

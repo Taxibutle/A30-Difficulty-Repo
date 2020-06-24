@@ -1,0 +1,8 @@
+#"WORKSHOP" "WORKSHOP" "workshop"
+#"FORGE" "FORGE" "forge"
+#"LABORATORY" "LABORATORY" "laboratory"
+#"JEWELER" "JEWELLER" "jeweler"
+"DIFF_ORGANIC_PILE" "DIFF_ORGANIC_PILE" "organic pile"
+"DIFF_CRAFTING_ALTAR" "DIFF_CRAFTING_ALTAR" "crafting altar"
+
+
